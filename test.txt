@@ -1,0 +1,52 @@
+DemoBlaze Automation Test Case Description
+Website: https://www.demoblaze.com
+
+1. SIGNUP_TEST — Sign up a new user
+Steps:
+1. Open the DemoBlaze homepage.
+2. Click the "Sign up" button.
+3. Enter a unique username and password.
+4. Click "Sign up" to submit.
+5. Handle the confirmation alert.
+Expected Result:
+   Alert message confirms successful registration.
+
+2. LOGIN_TEST — Log in with an existing user
+Steps:
+1. Open the DemoBlaze homepage.
+2. Click the "Log in" button.
+3. Enter username and password.
+4. Click "Log in".
+5. Wait until the username appears in the top bar.
+Expected Result:
+   User name is displayed and "Log out" button is visible.
+
+3. LOGOUT_TEST — Log out from the account
+Steps:
+1. Ensure the user is logged in.
+2. Click the "Log out" button.
+3. Wait for "Log in" button to reappear.
+Expected Result:
+   User is logged out successfully.
+
+4. BUY_PRODUCT_TEST — Purchase a product
+Steps:
+1. Ensure the user is logged in.
+2. Navigate to "Phones" category.
+3. Open "Iphone 6 32gb" product page.
+4. Click "Add to cart" and accept the alert.
+5. Open "Cart" and click "Place Order".
+6. Fill in the order form using stored test data.
+7. Click "Purchase".
+Expected Result:
+   A message "Thank you for your purchase" is displayed.
+
+5. REMOVE_FROM_CART_TEST — Delete a product from cart
+Steps to automate:
+1. Ensure the user is logged in.
+2. Add "Samsung galaxy s6" to the cart.
+3. Open "Cart" page.
+4. Click "Delete" for the selected product.
+5. Verify that the product name is no longer visible.
+Expected Result:
+   The product is successfully removed from the cart.

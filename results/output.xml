@@ -1,141 +1,873 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.1 on win32)" generated="2025-10-23T14:48:33.618211" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.1 on win32)" generated="2025-10-23T17:33:54.013805" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="C:\Users\danik\OneDrive\Desktop\task\testing\testCases\test.robot">
 <kw name="Open DemoBlaze" owner="resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:33.873523" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com'.</msg>
+<msg time="2025-10-23T17:33:54.294112" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com'.</msg>
 <arg>${TestData.BASE_URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-10-23T14:48:33.873043" elapsed="2.320687"/>
+<status status="PASS" start="2025-10-23T17:33:54.293460" elapsed="2.269068"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-10-23T14:48:36.193936" elapsed="0.022669"/>
+<status status="PASS" start="2025-10-23T17:33:56.562736" elapsed="0.029207"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${Locators.SIGNUP_BUTTON}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-23T14:48:36.216817" elapsed="0.014972"/>
+<status status="PASS" start="2025-10-23T17:33:56.592172" elapsed="0.012918"/>
 </kw>
-<status status="PASS" start="2025-10-23T14:48:33.872490" elapsed="2.359478"/>
+<status status="PASS" start="2025-10-23T17:33:54.292481" elapsed="2.312736"/>
 </kw>
-<test id="s1-t1" name="LOGIN_TEST" line="10">
+<test id="s1-t1" name="SIGNUP_TEST" line="10">
 <kw name="Sign Up New User" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:36.233703" level="INFO">Clicking element '//a[@id='signin2']'.</msg>
+<msg time="2025-10-23T17:33:56.606649" level="INFO">Clicking element '//a[@id='signin2']'.</msg>
 <arg>${Locators.SIGNUP_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-23T14:48:36.233216" elapsed="0.067314"/>
+<status status="PASS" start="2025-10-23T17:33:56.606184" elapsed="0.059092"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Locators.SIGNUP_USERNAME_INPUT}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-23T14:48:36.300716" elapsed="0.233573"/>
+<status status="PASS" start="2025-10-23T17:33:56.665453" elapsed="0.234212"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:33:57.900281" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:33:56.899817" elapsed="1.000576"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:36.535044" level="INFO">Typing text 'Daniyar112' into text field '//input[@id='sign-username']'.</msg>
+<msg time="2025-10-23T17:33:57.901122" level="INFO">Typing text 'Daniyar118' into text field '//input[@id='sign-username']'.</msg>
 <arg>${Locators.SIGNUP_USERNAME_INPUT}</arg>
 <arg>${TestData.USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-23T14:48:36.534446" elapsed="0.096926"/>
+<status status="PASS" start="2025-10-23T17:33:57.900537" elapsed="0.088432"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:36.633111" level="INFO">Typing text 'qwerty123' into text field '//input[@id='sign-password']'.</msg>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:33:58.989697" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:33:57.989137" elapsed="1.000664"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:33:58.990558" level="INFO">Typing password into text field '//input[@id='sign-password']'.</msg>
+<msg time="2025-10-23T17:33:59.019487" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${Locators.SIGNUP_PASSWORD_INPUT}</arg>
 <arg>${TestData.PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-23T14:48:36.632027" elapsed="0.102005"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:36.734711" level="INFO">Clicking element '//button[text()='Sign up']'.</msg>
-<arg>${Locators.SIGNUP_SUBMIT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-23T14:48:36.734197" elapsed="0.077451"/>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:33:58.989949" elapsed="0.069159"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-23T14:48:38.812253" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-23T17:34:00.059629" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:33:59.059266" elapsed="1.000486"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:00.060438" level="INFO">Clicking element '//button[text()='Sign up']'.</msg>
+<arg>${Locators.SIGNUP_SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:00.059942" elapsed="0.056006"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:02.116847" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-23T14:48:36.811821" elapsed="2.000556"/>
+<status status="PASS" start="2025-10-23T17:34:00.116104" elapsed="2.000894"/>
 </kw>
 <kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:38.812762" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-10-23T17:34:02.117342" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
 <arg>accept</arg>
 <doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2025-10-23T14:48:38.812560" elapsed="0.005091"/>
+<status status="PASS" start="2025-10-23T17:34:02.117185" elapsed="0.004926"/>
 </kw>
-<status status="PASS" start="2025-10-23T14:48:36.232814" elapsed="2.584949"/>
+<status status="PASS" start="2025-10-23T17:33:56.605894" elapsed="5.516323"/>
 </kw>
+<doc>Test sign-up functionality</doc>
+<status status="PASS" start="2025-10-23T17:33:56.605303" elapsed="5.517224"/>
+</test>
+<test id="s1-t2" name="LOGIN_TEST" line="13">
 <kw name="Log In Existing User" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:38.818768" level="INFO">Clicking element '//a[@id='login2']'.</msg>
+<msg time="2025-10-23T17:34:02.125296" level="INFO">Clicking element '//a[@id='login2']'.</msg>
 <arg>${Locators.LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-23T14:48:38.818378" elapsed="0.070571"/>
+<status status="PASS" start="2025-10-23T17:34:02.124487" elapsed="0.062945"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Locators.LOGIN_USERNAME_INPUT}</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-10-23T14:48:38.889098" elapsed="0.230302"/>
+<status status="PASS" start="2025-10-23T17:34:02.187630" elapsed="0.228975"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:03.417474" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:02.416774" elapsed="1.000825"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:39.120209" level="INFO">Typing text 'Daniyar112' into text field '//input[@id='loginusername']'.</msg>
+<msg time="2025-10-23T17:34:03.418596" level="INFO">Typing text 'Daniyar118' into text field '//input[@id='loginusername']'.</msg>
 <arg>${Locators.LOGIN_USERNAME_INPUT}</arg>
 <arg>${TestData.USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-23T14:48:39.119579" elapsed="0.068351"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:39.188705" level="INFO">Typing text 'qwerty123' into text field '//input[@id='loginpassword']'.</msg>
-<arg>${Locators.LOGIN_PASSWORD_INPUT}</arg>
-<arg>${TestData.PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-23T14:48:39.188084" elapsed="0.070010"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-10-23T14:48:39.258634" level="INFO">Clicking element '//button[text()='Log in']'.</msg>
-<arg>${Locators.LOGIN_SUBMIT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-10-23T14:48:39.258244" elapsed="0.054093"/>
+<status status="PASS" start="2025-10-23T17:34:03.417783" elapsed="0.069997"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-10-23T14:48:41.313037" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-10-23T17:34:04.488402" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:03.487950" elapsed="1.000579"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:04.489532" level="INFO">Typing password into text field '//input[@id='loginpassword']'.</msg>
+<msg time="2025-10-23T17:34:04.518047" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Locators.LOGIN_PASSWORD_INPUT}</arg>
+<arg>${TestData.PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:04.488709" elapsed="0.063755"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:05.553370" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:04.552607" elapsed="1.000893"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:05.554221" level="INFO">Clicking element '//button[text()='Log in']'.</msg>
+<arg>${Locators.LOGIN_SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:05.553681" elapsed="0.053746"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:07.608197" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-10-23T14:48:39.312488" elapsed="2.000674"/>
+<status status="PASS" start="2025-10-23T17:34:05.607594" elapsed="2.000719"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${Locators.USERNAME_DISPLAY}</arg>
 <arg>timeout=8s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-10-23T14:48:41.313344" elapsed="0.011068"/>
+<status status="PASS" start="2025-10-23T17:34:07.608476" elapsed="0.011079"/>
 </kw>
-<status status="PASS" start="2025-10-23T14:48:38.818121" elapsed="2.506386"/>
+<status status="PASS" start="2025-10-23T17:34:02.123754" elapsed="5.496101"/>
 </kw>
-<doc>Test sign-up and login functionality on DemoBlaze</doc>
-<status status="PASS" start="2025-10-23T14:48:36.232090" elapsed="5.092685"/>
+<doc>Test login functionality</doc>
+<status status="PASS" start="2025-10-23T17:34:02.123131" elapsed="5.496995"/>
+</test>
+<test id="s1-t3" name="LOGOUT_TEST" line="17">
+<kw name="Ensure Logged In" owner="resources">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:07.621421" elapsed="0.013391"/>
+</kw>
+<msg time="2025-10-23T17:34:07.634953" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-23T17:34:07.621303" elapsed="0.013676"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2025-10-23T17:34:07.635132" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<arg>${is_visible}</arg>
+<arg>Log In Existing User</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2025-10-23T17:34:07.635101" elapsed="0.000386"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:07.635587" elapsed="0.012710"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:07.665688" level="INFO">${user_text} = Welcome Daniyar118</msg>
+<var>${user_text}</var>
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:07.648446" elapsed="0.017282"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${user_text}</arg>
+<arg>${TestData.USERNAME}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-23T17:34:07.665859" elapsed="0.000367"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:08.667151" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:07.666305" elapsed="1.000964"/>
+</kw>
+<doc>If not logged in, log in. Checks the visibility of the user's name.</doc>
+<status status="PASS" start="2025-10-23T17:34:07.621088" elapsed="1.046290"/>
+</kw>
+<kw name="Log Out User" owner="resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:09.669299" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:08.668156" elapsed="1.001266"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:09.670432" level="INFO">Clicking element '//a[@id='logout2']'.</msg>
+<arg>${Locators.LOGOUT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:09.669610" elapsed="0.325913"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:10.996216" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:09.995810" elapsed="1.000528"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.LOGIN_BUTTON}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:10.996520" elapsed="0.008582"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:08.667835" elapsed="2.337391"/>
+</kw>
+<doc>Test logout functionality</doc>
+<status status="PASS" start="2025-10-23T17:34:07.620680" elapsed="3.384845"/>
+</test>
+<test id="s1-t4" name="BUY_PRODUCT_TEST" line="22">
+<kw name="Ensure Logged In" owner="resources">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:13.288146" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-23T17:34:13.288324" level="FAIL">Element '//a[@id='nameofuser']' not visible after 2 seconds.</msg>
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-10-23T17:34:11.007036" elapsed="2.283140">Element '//a[@id='nameofuser']' not visible after 2 seconds.</status>
+</kw>
+<msg time="2025-10-23T17:34:13.290326" level="INFO">${is_visible} = False</msg>
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-23T17:34:11.006922" elapsed="2.283430"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2025-10-23T17:34:13.290526" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Log In Existing User" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:13.291594" level="INFO">Clicking element '//a[@id='login2']'.</msg>
+<arg>${Locators.LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:13.291226" elapsed="0.045426"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.LOGIN_USERNAME_INPUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:13.336808" elapsed="0.225496"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:14.562928" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:13.562451" elapsed="1.000600"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:14.564002" level="INFO">Typing text 'Daniyar118' into text field '//input[@id='loginusername']'.</msg>
+<arg>${Locators.LOGIN_USERNAME_INPUT}</arg>
+<arg>${TestData.USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:14.563232" elapsed="0.067940"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:15.631740" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:14.631351" elapsed="1.000585"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:15.633009" level="INFO">Typing password into text field '//input[@id='loginpassword']'.</msg>
+<msg time="2025-10-23T17:34:15.658469" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Locators.LOGIN_PASSWORD_INPUT}</arg>
+<arg>${TestData.PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:15.632178" elapsed="0.062313"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:16.694964" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:15.694654" elapsed="1.000430"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:16.695822" level="INFO">Clicking element '//button[text()='Log in']'.</msg>
+<arg>${Locators.LOGIN_SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:16.695267" elapsed="0.043817"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:18.739953" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:16.739430" elapsed="2.000653"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:18.740266" elapsed="0.008524"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:13.291027" elapsed="5.457890"/>
+</kw>
+<arg>${is_visible}</arg>
+<arg>Log In Existing User</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2025-10-23T17:34:13.290495" elapsed="5.458509"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:18.749150" elapsed="0.013729"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:18.775999" level="INFO">${user_text} = Welcome Daniyar118</msg>
+<var>${user_text}</var>
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:18.763030" elapsed="0.013020"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${user_text}</arg>
+<arg>${TestData.USERNAME}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-23T17:34:18.776220" elapsed="0.000519"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:19.777306" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:18.776840" elapsed="1.000600"/>
+</kw>
+<doc>If not logged in, log in. Checks the visibility of the user's name.</doc>
+<status status="PASS" start="2025-10-23T17:34:11.006675" elapsed="8.770878"/>
+</kw>
+<kw name="Go To Phones Category" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:19.778888" level="INFO">Clicking element '//a[text()='Phones']'.</msg>
+<arg>${Locators.CATEGORY_PHONES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:19.778306" elapsed="0.069031"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:20.848309" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:19.847506" elapsed="1.000927"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.PRODUCT_SAMSUNG_GALAXY_S6}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:20.848615" elapsed="0.010053"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:19.777985" elapsed="1.080785"/>
+</kw>
+<kw name="Open Product Page" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:20.859743" level="INFO">Clicking element '//a[text()='Iphone 6 32gb']'.</msg>
+<arg>${product_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:20.859582" elapsed="0.531451"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:22.392144" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:21.391203" elapsed="1.001064"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.ADD_TO_CART_BUTTON}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:22.392445" elapsed="0.010130"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:23.403395" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:22.402738" elapsed="1.000778"/>
+</kw>
+<arg>${Locators.PRODUCT_IPHONE_6_32gb}</arg>
+<status status="PASS" start="2025-10-23T17:34:20.859097" elapsed="2.544532"/>
+</kw>
+<kw name="Add Product To Cart" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.ADD_TO_CART_BUTTON}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:23.404258" elapsed="0.013940"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:23.418773" level="INFO">Clicking element '//a[text()='Add to cart']'.</msg>
+<arg>${Locators.ADD_TO_CART_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:23.418350" elapsed="0.059775"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:25.478943" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:23.478315" elapsed="2.000750"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:25.479419" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-10-23T17:34:25.484200" level="INFO">${alert_text} = Product added.</msg>
+<var>${alert_text}</var>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-10-23T17:34:25.479245" elapsed="0.004997"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-23T17:34:25.484537" level="INFO">Alert after add to cart: Product added.</msg>
+<arg>Alert after add to cart: ${alert_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-23T17:34:25.484381" elapsed="0.000207"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:26.485317" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:25.484682" elapsed="1.000772"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:23.404028" elapsed="3.081542"/>
+</kw>
+<kw name="Open Cart And Place Order" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:26.486921" level="INFO">Clicking element '//a[@id='cartur']'.</msg>
+<arg>${Locators.CART_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:26.486354" elapsed="0.559033"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.PLACE_ORDER_BUTTON}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:27.045590" elapsed="0.031146"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:28.077238" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:27.076909" elapsed="1.000457"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:28.078138" level="INFO">Clicking element '//button[text()='Place Order']'.</msg>
+<arg>${Locators.PLACE_ORDER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:28.077556" elapsed="0.050446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.ORDER_MODAL}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:28.128207" elapsed="0.228968"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:29.357953" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:28.357321" elapsed="1.000753"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.ORDER_NAME_INPUT}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:29.358254" elapsed="0.016259"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:26.485983" elapsed="2.888626"/>
+</kw>
+<kw name="Fill Place Order Form" owner="resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:29.375717" level="INFO">Typing text 'Daniyar Nurlanov' into text field '//input[@id='name']'.</msg>
+<arg>${Locators.ORDER_NAME_INPUT}</arg>
+<arg>${TestData.ORDER_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:29.375150" elapsed="0.084841"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:30.460503" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:29.460155" elapsed="1.000469"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:30.461436" level="INFO">Typing text 'Kazakhstan' into text field '//input[@id='country']'.</msg>
+<arg>${Locators.ORDER_COUNTRY_INPUT}</arg>
+<arg>${TestData.ORDER_COUNTRY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:30.460804" elapsed="0.074449"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:31.536161" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:30.535407" elapsed="1.000877"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:31.537312" level="INFO">Typing text 'Almaty' into text field '//input[@id='city']'.</msg>
+<arg>${Locators.ORDER_CITY_INPUT}</arg>
+<arg>${TestData.ORDER_CITY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:31.536466" elapsed="0.067607"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:32.604837" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:31.604248" elapsed="1.000718"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:32.605980" level="INFO">Typing text '43324356678678' into text field '//input[@id='card']'.</msg>
+<arg>${Locators.ORDER_CARD_INPUT}</arg>
+<arg>${TestData.ORDER_CARD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:32.605153" elapsed="0.078041"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:33.683961" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:32.683344" elapsed="1.000742"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:33.685079" level="INFO">Typing text '10' into text field '//input[@id='month']'.</msg>
+<arg>${Locators.ORDER_MONTH_INPUT}</arg>
+<arg>${TestData.ORDER_MONTH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:33.684272" elapsed="0.066474"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:34.751604" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:33.750896" elapsed="1.000851"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:34.752615" level="INFO">Typing text '2025' into text field '//input[@id='year']'.</msg>
+<arg>${Locators.ORDER_YEAR_INPUT}</arg>
+<arg>${TestData.ORDER_YEAR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:34.751941" elapsed="0.065579"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:35.818227" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:34.817695" elapsed="1.000656"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:29.374926" elapsed="6.443538"/>
+</kw>
+<kw name="Confirm Purchase And Verify Receipt" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:35.819723" level="INFO">Clicking element '//button[text()='Purchase']'.</msg>
+<arg>${Locators.PURCHASE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:35.819160" elapsed="0.090506"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:36.910209" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:35.909869" elapsed="1.000460"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${Locators.PURCHASE_CONFIRM_TEXT}</arg>
+<arg>timeout=12s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:36.910507" elapsed="0.010763"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:36.921916" level="INFO">Clicking element '//button[text()='OK']'.</msg>
+<arg>${Locators.PURCHASE_OK_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:36.921557" elapsed="0.549980"/>
+</kw>
+<arg>Click Element</arg>
+<arg>${Locators.PURCHASE_OK_BUTTON}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-10-23T17:34:36.921429" elapsed="0.550204"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:38.472501" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:37.471752" elapsed="1.000878"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:35.818853" elapsed="2.653898"/>
+</kw>
+<doc>Add Iphone 6 32gb to cart and complete purchase</doc>
+<status status="PASS" start="2025-10-23T17:34:11.006133" elapsed="27.467005"/>
+</test>
+<test id="s1-t5" name="REMOVE_FROM_CART_TEST" line="32">
+<kw name="Ensure Logged In" owner="resources">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:38.474830" elapsed="0.013889"/>
+</kw>
+<msg time="2025-10-23T17:34:38.488858" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=2s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-23T17:34:38.474713" elapsed="0.014172"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2025-10-23T17:34:38.489035" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<arg>${is_visible}</arg>
+<arg>Log In Existing User</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2025-10-23T17:34:38.489007" elapsed="0.000505"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:38.489802" elapsed="0.012724"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:38.515335" level="INFO">${user_text} = Welcome Daniyar118</msg>
+<var>${user_text}</var>
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:38.502676" elapsed="0.012702"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${user_text}</arg>
+<arg>${TestData.USERNAME}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-23T17:34:38.515509" elapsed="0.000368"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:39.516628" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:38.515956" elapsed="1.000794"/>
+</kw>
+<doc>If not logged in, log in. Checks the visibility of the user's name.</doc>
+<status status="PASS" start="2025-10-23T17:34:38.474429" elapsed="1.042431"/>
+</kw>
+<kw name="Add Product To Cart For Deletion Test" owner="resources">
+<kw name="Go To Phones Category" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:39.518437" level="INFO">Clicking element '//a[text()='Phones']'.</msg>
+<arg>${Locators.CATEGORY_PHONES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:39.517923" elapsed="0.054149"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:40.572960" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:39.572219" elapsed="1.000862"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.PRODUCT_SAMSUNG_GALAXY_S6}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:40.573268" elapsed="0.007333"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:39.517692" elapsed="1.063005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:41.581468" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:40.580797" elapsed="1.000770"/>
+</kw>
+<kw name="Open Product Page" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:41.582364" level="INFO">Clicking element '//a[text()='Samsung galaxy s6']'.</msg>
+<arg>${product_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:41.582211" elapsed="0.525609"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:43.108492" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:42.107982" elapsed="1.000633"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.ADD_TO_CART_BUTTON}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:43.108798" elapsed="0.011067"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:44.120490" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:43.120016" elapsed="1.000596"/>
+</kw>
+<arg>${Locators.PRODUCT_SAMSUNG_GALAXY_S6}</arg>
+<status status="PASS" start="2025-10-23T17:34:41.581757" elapsed="2.538965"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:45.121549" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:44.120863" elapsed="1.000810"/>
+</kw>
+<kw name="Add Product To Cart" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.ADD_TO_CART_BUTTON}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:45.122151" elapsed="0.013055"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:45.135782" level="INFO">Clicking element '//a[text()='Add to cart']'.</msg>
+<arg>${Locators.ADD_TO_CART_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:45.135358" elapsed="0.052088"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:47.188490" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:45.187648" elapsed="2.001031"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:47.189144" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-10-23T17:34:47.193961" level="INFO">${alert_text} = Product added.</msg>
+<var>${alert_text}</var>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-10-23T17:34:47.188955" elapsed="0.005045"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-10-23T17:34:47.194296" level="INFO">Alert after add to cart: Product added.</msg>
+<arg>Alert after add to cart: ${alert_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-10-23T17:34:47.194141" elapsed="0.000194"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:48.194903" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:47.194414" elapsed="1.000647"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:45.121919" elapsed="3.073249"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:49.196158" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:48.195295" elapsed="1.000986"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:49.196941" level="INFO">Clicking element '//a[@id='cartur']'.</msg>
+<arg>${Locators.CART_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:49.196462" elapsed="0.562561"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.DELETE_BUTTON}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T17:34:49.759192" elapsed="1.281969"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:39.517323" elapsed="11.523947"/>
+</kw>
+<kw name="Remove Product From Cart" owner="resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.DELETE_BUTTON}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T17:34:51.041859" elapsed="0.013906"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:51.070317" level="INFO">Current page contains text 'Samsung galaxy s6'.</msg>
+<arg>${product_name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-10-23T17:34:51.055940" elapsed="0.014508"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:51.071372" level="INFO">Clicking element '//a[text()='Delete']'.</msg>
+<arg>${Locators.DELETE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T17:34:51.070793" elapsed="0.063014"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T17:34:53.134772" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T17:34:51.134003" elapsed="2.000889"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-23T17:34:53.292372" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-23T17:34:53.292507" level="FAIL">Page should have contained text 'Samsung galaxy s6' but did not.</msg>
+<arg>${product_name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-10-23T17:34:53.135259" elapsed="0.158225">Page should have contained text 'Samsung galaxy s6' but did not.</status>
+</kw>
+<msg time="2025-10-23T17:34:53.293639" level="INFO">${is_still_present} = False</msg>
+<var>${is_still_present}</var>
+<arg>Page Should Contain</arg>
+<arg>${product_name}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-10-23T17:34:53.135081" elapsed="0.158584"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${is_still_present}</arg>
+<arg>Fail</arg>
+<arg>The product '${product_name}' was not removed from the shopping cart</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-10-23T17:34:53.293797" elapsed="0.000117"/>
+</kw>
+<status status="PASS" start="2025-10-23T17:34:51.041592" elapsed="2.252384"/>
+</kw>
+<doc>Test removing product from the cart</doc>
+<status status="PASS" start="2025-10-23T17:34:38.473871" elapsed="14.820328"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-10-23T14:48:41.325562" elapsed="2.100782"/>
+<status status="PASS" start="2025-10-23T17:34:53.294835" elapsed="2.156184"/>
 </kw>
 <doc>Automation tests for https://www.demoblaze.com</doc>
-<status status="PASS" start="2025-10-23T14:48:33.619749" elapsed="9.806692"/>
+<status status="PASS" start="2025-10-23T17:33:54.015244" elapsed="61.435877"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+<stat name="Test" id="s1" pass="5" fail="0" skip="0">Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-10-23T17:34:07.635132" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2025-10-23T17:34:13.290526" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<msg time="2025-10-23T17:34:38.489035" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
 </errors>
 </robot>
