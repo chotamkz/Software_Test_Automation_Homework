@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.1 on win32)" generated="2025-10-23T14:48:33.618211" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\danik\OneDrive\Desktop\task\testing\testCases\test.robot">
+<kw name="Open DemoBlaze" owner="resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:33.873523" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com'.</msg>
+<arg>${TestData.BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-23T14:48:33.873043" elapsed="2.320687"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-23T14:48:36.193936" elapsed="0.022669"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.SIGNUP_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T14:48:36.216817" elapsed="0.014972"/>
+</kw>
+<status status="PASS" start="2025-10-23T14:48:33.872490" elapsed="2.359478"/>
+</kw>
+<test id="s1-t1" name="LOGIN_TEST" line="10">
+<kw name="Sign Up New User" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:36.233703" level="INFO">Clicking element '//a[@id='signin2']'.</msg>
+<arg>${Locators.SIGNUP_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T14:48:36.233216" elapsed="0.067314"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.SIGNUP_USERNAME_INPUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T14:48:36.300716" elapsed="0.233573"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:36.535044" level="INFO">Typing text 'Daniyar112' into text field '//input[@id='sign-username']'.</msg>
+<arg>${Locators.SIGNUP_USERNAME_INPUT}</arg>
+<arg>${TestData.USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T14:48:36.534446" elapsed="0.096926"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:36.633111" level="INFO">Typing text 'qwerty123' into text field '//input[@id='sign-password']'.</msg>
+<arg>${Locators.SIGNUP_PASSWORD_INPUT}</arg>
+<arg>${TestData.PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T14:48:36.632027" elapsed="0.102005"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:36.734711" level="INFO">Clicking element '//button[text()='Sign up']'.</msg>
+<arg>${Locators.SIGNUP_SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T14:48:36.734197" elapsed="0.077451"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T14:48:38.812253" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T14:48:36.811821" elapsed="2.000556"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:38.812762" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-10-23T14:48:38.812560" elapsed="0.005091"/>
+</kw>
+<status status="PASS" start="2025-10-23T14:48:36.232814" elapsed="2.584949"/>
+</kw>
+<kw name="Log In Existing User" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:38.818768" level="INFO">Clicking element '//a[@id='login2']'.</msg>
+<arg>${Locators.LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T14:48:38.818378" elapsed="0.070571"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Locators.LOGIN_USERNAME_INPUT}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-10-23T14:48:38.889098" elapsed="0.230302"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:39.120209" level="INFO">Typing text 'Daniyar112' into text field '//input[@id='loginusername']'.</msg>
+<arg>${Locators.LOGIN_USERNAME_INPUT}</arg>
+<arg>${TestData.USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T14:48:39.119579" elapsed="0.068351"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:39.188705" level="INFO">Typing text 'qwerty123' into text field '//input[@id='loginpassword']'.</msg>
+<arg>${Locators.LOGIN_PASSWORD_INPUT}</arg>
+<arg>${TestData.PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T14:48:39.188084" elapsed="0.070010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T14:48:39.258634" level="INFO">Clicking element '//button[text()='Log in']'.</msg>
+<arg>${Locators.LOGIN_SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T14:48:39.258244" elapsed="0.054093"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T14:48:41.313037" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T14:48:39.312488" elapsed="2.000674"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${Locators.USERNAME_DISPLAY}</arg>
+<arg>timeout=8s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-23T14:48:41.313344" elapsed="0.011068"/>
+</kw>
+<status status="PASS" start="2025-10-23T14:48:38.818121" elapsed="2.506386"/>
+</kw>
+<doc>Test sign-up and login functionality on DemoBlaze</doc>
+<status status="PASS" start="2025-10-23T14:48:36.232090" elapsed="5.092685"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-23T14:48:41.325562" elapsed="2.100782"/>
+</kw>
+<doc>Automation tests for https://www.demoblaze.com</doc>
+<status status="PASS" start="2025-10-23T14:48:33.619749" elapsed="9.806692"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
