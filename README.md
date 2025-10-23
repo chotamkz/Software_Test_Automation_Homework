@@ -2,8 +2,7 @@
 ![img.png](img.png)
 
 **Website:** [https://www.demoblaze.com](https://www.demoblaze.com)  
-**Framework:** Robot Framework + SeleniumLibrary  
-**Browser:** Google Chrome  
+**Description of test case in a txt file:**  [test.txt](./test.txt)
 
 This project automates 5 test cases for the DemoBlaze website:
 1. **SIGNUP_TEST** – Register a new user  
