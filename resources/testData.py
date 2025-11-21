@@ -1,8 +1,15 @@
+import time
+import random
+
 baseurl = "https://www.demoblaze.com"
+
+timestamp = str(int(time.time()))[-6:]
+random_num = random.randint(100, 999)
+unique_username = f"Daniyar{timestamp}{random_num}"
 
 class TestData:
     BASE_URL = "https://www.demoblaze.com"
-    USERNAME = "Daniyar118"
+    USERNAME = unique_username
     PASSWORD = "qwerty123"
 
     ORDER_NAME = "Daniyar Nurlanov"

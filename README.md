@@ -1,10 +1,16 @@
-# DemoBlaze Automation Testing
+# DemoBlaze Automation Testing with BrowserStack
+
 ![img.png](img.png)
 
 **Website:** [https://www.demoblaze.com](https://www.demoblaze.com)  
-**Description of test case in a txt file:**  [test.txt](./test.txt)
+**Test Cases Description:** [test.txt](./test.txt)
 
-This project automates 5 test cases for the DemoBlaze website:
+This project automates 5 test cases for the DemoBlaze website using **Robot Framework** and **BrowserStack** for cross-browser testing.
+
+---
+
+## Test Cases
+
 1. **SIGNUP_TEST** – Register a new user  
 2. **LOGIN_TEST** – Log in with an existing user  
 3. **LOGOUT_TEST** – Log out from the account  
@@ -12,5 +18,43 @@ This project automates 5 test cases for the DemoBlaze website:
 5. **REMOVE_FROM_CART_TEST** – Delete a product from the cart  
 
 ---
-### Run all tests `python main.py`
+
+## Browser Coverage (BrowserStack)
+
+- **Chrome** 
+- **Firefox** 
+- **Safari** 
+
+All tests run on **BrowserStack** cloud infrastructure.
+
+---
+
+## Running Tests with BrowserStack
+
+### Run All Browsers
+
+```bash
+robot --outputdir results/chrome testcases/chrome.robot
+robot --outputdir results/firefox testcases/firefox.robot
+robot --outputdir results/safari testcases/safari.robot
+```
+
+### Run Single Browser
+
+```bash
+robot testcases/chrome.robot
+
+robot testcases/firefox.robot
+
+robot testcases/safari.robot
+```
+
+### Run Specific Test Case
+
+```bash
+robot --test "Chrome - LOGIN_TEST" testcases/chrome.robot
+```
+
+---
+### Run all tests locally `python main.py` 
 ### Run a specific test case: `robot --test NAME_TEST_CASE testCases/test.robot`
