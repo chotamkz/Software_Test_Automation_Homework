@@ -12,6 +12,8 @@ Suite Setup      Open Browser On BrowserStack
 ...              DemoBlaze Firefox Tests
 Suite Teardown   Close Browser
 
+Test Teardown    Update BrowserStack Status
+
 *** Test Cases ***
 Firefox - SIGNUP_TEST
     [Documentation]    Test sign-up functionality on Firefox

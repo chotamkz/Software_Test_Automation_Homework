@@ -33,3 +33,16 @@ Open Browser On BrowserStack
 
     Maximize Browser Window
     Set Selenium Speed    0.5s
+
+Update BrowserStack Status
+    Run Keyword If Test Failed    Mark Test Status    failed    Test Failed
+    Run Keyword If Test Passed    Mark Test Status    passed    Test Passed
+
+
+Mark Test Status
+    [Arguments]    ${status}    ${reason}
+    [Documentation]    Sends test status to BrowserStack (passed/failed)
+
+    ${script}=    Set Variable    browserstack_executor: {"action": "setSessionStatus", "arguments": {"status": "${status}", "reason": "${reason}"}}
+
+    Execute Javascript    ${script}

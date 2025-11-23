@@ -12,6 +12,8 @@ Suite Setup      Open Browser On BrowserStack
 ...              DemoBlaze Chrome Tests
 Suite Teardown   Close Browser
 
+Test Teardown    Update BrowserStack Status
+
 *** Test Cases ***
 Chrome - SIGNUP_TEST
     [Documentation]    Test sign-up functionality on Chrome
